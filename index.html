@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tank Hunter Decipher 2025</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:,"> <!-- Prevents favicon requests -->
+</head>
+<body>
+    <!-- Audio Element -->
+    <audio id="game-music" loop>
+        <source src="assets/sounds/background.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Audio Controls -->
+    <div id="audio-controls">
+        <button id="play-pause-btn" title="Play/Pause">▶</button>
+        <button id="mute-btn" title="Mute">🔊</button>
+    </div>
+
+    <div id="game-container">
+        <div id="home-screen">
+            <div id="logo-container">
+                <img src="assets/logo.png" alt="Tank Hunter Decipher 2025 Logo" id="game-logo">
+            </div>
+            <button id="start-btn">START MISSION</button>
+        </div>
+        
+        <div id="instructions">
+            <h2>OPERATION INSTRUCTIONS</h2>
+            <div id="instructions-box" class="message-box">
+                <p>1. You will receive encrypted 4-digit codes</p>
+                <p>2. Decode the messages using the provided hints</p>
+                <p>3. Enter the correct code to eliminate enemies</p>
+                <p>4. You have 60 seconds per wave</p>
+                <p>5. Each wrong answer reduces time by 10 seconds</p>
+                <p>6. Revealing an answer costs 5 seconds</p>
+                <p>7. You have 3 lives</p>
+                <p>8. Eliminate all enemies to win</p>
+            </div>
+            <button id="instructions-continue">ACKNOWLEDGED</button>
+        </div>
+        
+        <div id="story">
+            <h2>SITUATION REPORT</h2>
+            <div id="story-box" class="message-box">
+                <p>October 7, 2042 - 03:47 Hours</p>
+                <p>The border has collapsed. Enemy forces have broken through.</p>
+                <p>Your battalion is all that stands between them and the capital.</p>
+                <p>Our intelligence network is compromised.</p>
+                <p>You are our last cryptographer.</p>
+                <p>Decode their positions and direct our artillery.</p>
+                <p>The fate of the nation rests with you.</p>
+            </div>
+            <button id="story-continue">BEGIN MISSION</button>
+        </div>
+        
+        <div id="game-screen">
+            <div id="game-message-box" class="message-box"></div>
+            <div id="hint" class="hint"></div>
+            <div id="input-container">
+                <input type="number" id="coordinate-input" placeholder="Enter 4-digit code" min="0" max="9999">
+                <button id="submit-btn">FIRE</button>
+            </div>
+            <div id="reveal-container">
+                <button id="reveal-btn">REVEAL ANSWER (-5s)</button>
+                <div id="revealed-answer" class="revealed-answer"></div>
+            </div>
+            <div id="timer">TIME: 60s</div>
+            <div id="lives">LIVES: ❤❤❤</div>
+            <div id="score">SCORE: 0</div>
+            <div id="enemies-remaining"></div>
+        </div>
+        
+        <div id="game-over">
+            <h2 id="game-over-title">MISSION FAILED</h2>
+            <div id="game-over-message-box" class="message-box">
+                <p id="final-score">Final Score: 0</p>
+                <p>Enemy forces have overrun your position.</p>
+                <p>The capital has fallen.</p>
+            </div>
+            <button id="restart-btn">TRY AGAIN</button>
+        </div>
+        
+        <div id="victory-screen">
+            <h2>VICTORY ACHIEVED</h2>
+            <div class="message-box">
+                <p id="victory-score">Final Score: 0</p>
+                <p>All enemy transmissions decoded!</p>
+                <p>The border is secure thanks to you.</p>
+            </div>
+            <button id="victory-restart-btn">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
